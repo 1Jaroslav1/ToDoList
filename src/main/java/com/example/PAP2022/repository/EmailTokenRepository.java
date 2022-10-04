@@ -14,7 +14,6 @@ import java.util.Optional;
 @Repository
 @Transactional
 public interface EmailTokenRepository extends JpaRepository<EmailToken, Long> {
-
     Optional<EmailToken> findByToken(String token);
     void deleteByApplicationUser(ApplicationUser user);
 

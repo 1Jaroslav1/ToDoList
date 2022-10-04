@@ -56,4 +56,12 @@ public class ApplicationUser {
         this.image = img;
         this.applicationUserRole = applicationUserRole;
     }
+
+    public ApplicationUser(String firstName, String lastName, String email, String password, ApplicationUserRole applicationUserRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.applicationUserRole = applicationUserRole;
+    }
 }

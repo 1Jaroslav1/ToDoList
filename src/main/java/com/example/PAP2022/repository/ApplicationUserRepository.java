@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, Long> {
-
   Optional<ApplicationUser> findByEmail(String email);
 
   void deleteByEmail(String email);

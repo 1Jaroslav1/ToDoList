@@ -20,7 +20,7 @@ public class YamlConfigurator {
                 .getResourceAsStream("application.yaml");
 
         Yaml yaml = new Yaml();
-        return yaml.load(inputStream);
+        return yaml.load(inputStream);//D:\SEM4\PAP\finalProject\pap22l-z04\src
     }
 
     public void setYamlProperties(Map<String, Object> data) throws FileNotFoundException {
@@ -29,7 +29,7 @@ public class YamlConfigurator {
         options.setPrettyFlow(true);
         options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
 
-        PrintWriter writer = new PrintWriter(new File("./src/main/resources/application.yaml"));
+        PrintWriter writer = new PrintWriter(new File("./pap22l-z04/src/main/resources/application.yaml"));
         Yaml yaml = new Yaml(options);
         yaml.dump(data, writer);
     }
